@@ -11,9 +11,11 @@ import HomePage from './components/Home';
 ReactDOM.render(
     <BrowserRouter>
         <Link to={'header'}> Header</Link>
-        <Link to={'home'}> Home</Link>
+        <Link to={'/'}> Home</Link>
+        <Link to={'/12'}> Home1</Link>
+        <Link to={'/13'}> Home2</Link>
         <Route path="/header" component={Header} />
-        <Route path="/home" component={HomePage} />
+        <Route path="/:id" component={HomePage} />
     </BrowserRouter>,
     document.getElementById('root')
 );
